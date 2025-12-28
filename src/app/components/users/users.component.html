@@ -1,0 +1,69 @@
+<!-- <p>users works!</p>.
+ <button mat-raised-button routerLink="/todos" color="accent">Todos</button> -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-right">
+
+      
+<button  mat-raised-button routerLink="addUser" color="accent">Add</button> 
+  </div>
+    </div>
+</div>
+<div class="row" *ngIf="userArr.length>0;else Nouser">
+<div class="col-md-4">
+  <ul class="list-group">
+  <div class="col-md-8 mx-auto">
+  <ul class="list-group list-group-flush">
+    <li
+      class="list-group-item shadow-sm mb-3 rounded p-3 user-card"
+      *ngFor="let user of userArr"
+      [routerLink]="[user.id]"
+      role="button"
+    >
+      <div class="d-flex justify-content-between align-items-center">
+        <h5 class="mb-1 text-primary">
+          {{ user.name }}
+        </h5>
+
+        <span
+          class="badge"
+          [ngClass]="{
+            'bg-success': user.role === 'Admin',
+            'bg-info': user.role === 'User',
+            'bg-warning text-dark': user.role === 'Manager'
+          }"
+        >
+          {{ user.role }}
+        </span>
+      </div>
+
+    </li>
+  </ul>
+</div>
+
+<!-- <li
+  class="list-group-item shadow-sm mb-2"
+  *ngFor="let user of userArr"
+  [routerLink]="[user.id]"
+>
+  <h6>{{ user.name }} ({{ user.role }})</h6>
+  <p>Email: {{ user.email }}</p>
+  <p>Age: {{ user.age }}</p>
+</li> -->
+
+
+  </ul>
+</div>
+
+    <div class="col-md-8">
+        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <ng-template #Nouser>
+<p class="alert alert-info">Data Not found</p>
+        </ng-template>
+    </div>
+</div>

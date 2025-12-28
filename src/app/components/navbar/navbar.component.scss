@@ -1,0 +1,22 @@
+/* Navbar link default */
+.navbar .nav-link {
+  font-weight: 500;
+  color: #555;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.navbar .nav-link:hover {
+  background-color: #e3f2fd;
+  color: #0d6efd;
+}
+
+/* Active link */
+.active-link .nav-link {
+  background-color: #0d6efd;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 6px;
+}

@@ -1,0 +1,57 @@
+<div class="table-responsive">
+  <table
+    class="table table-bordered table-hover"
+    *ngIf="studentArr.length > 0; else nodata"
+  >
+    <thead>
+      <tr>
+        <th>SR NO.</th>
+        <th>FULLNAME</th>
+        <th>CONTACT</th>
+        <th>EMAIL</th>
+        <th>EDIT</th>
+        <th>REMOVE</th>
+      
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr
+        *ngFor="let student of studentArr; let i = index; trackBy: trackById"
+      >
+        <td>{{ i + 1 }}</td>
+        <td>{{ student.fullName | titlecase }}</td>
+        <td>{{ student.contact }}</td>
+        <td>{{ student.email | titlecase }}</td>
+
+        <td>
+          <button
+            mat-mini-fab
+            color="primary"
+            (click)="editStd(student)"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+        </td>
+
+        <td>
+          <button
+            mat-mini-fab
+            color="warn"
+            (click)="removeStd(student.stdId)"
+            
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- [disabled]="student.stdId === editedId" -->
+
+  <ng-template #nodata>
+    <p class="alert alert-info">
+      No data added to table yet
+    </p>
+  </ng-template>
+</div>

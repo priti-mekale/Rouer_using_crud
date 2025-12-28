@@ -1,0 +1,39 @@
+.user-card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+}
+
+.user-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+mat-card-header {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+}
+
+mat-card-title {
+  font-size: 1.3rem;
+  color: #1976d2;
+}
+
+mat-card-content p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #424242;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button mat-icon {
+  margin-right: 5px;
+}
