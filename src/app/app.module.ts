@@ -29,7 +29,11 @@ import { MatCardModule } from '@angular/material/card';  // Add this import
 import { MaterialModule } from './material/material/material.module';
 
 import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {  MatDialogModule } from '@angular/material/dialog';
+import { ProductComponent } from './components/product/product.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+
 
 @NgModule({
   declarations: [
@@ -45,6 +49,8 @@ import {  MatDialogModule } from '@angular/material/dialog';
     PageNotFoundComponent,
     UserComponent,
     UserFormComponent,
+    ProductComponent,
+    ProductListComponent,
   
   
     
@@ -58,7 +64,7 @@ import {  MatDialogModule } from '@angular/material/dialog';
     MatButtonModule,
     MatDialogModule,
    MatIconModule, PassengerModule, ApproutingModule,
-    RouterModule,MatButtonModule,MatIconModule,MatCardModule,MaterialModule,FormsModule
+    RouterModule,MatButtonModule,MatIconModule,MatCardModule,MaterialModule,FormsModule,MatFormFieldModule
 ],
   providers: [],
   bootstrap: [AppComponent]

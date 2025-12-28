@@ -11,7 +11,7 @@
         color="primary"
         class="me-2"
         (click)="editTodo(todo)">
-        Edit
+         <mat-icon>edit</mat-icon>
       </button>
 
       <button
@@ -19,7 +19,7 @@
         color="warn"
         (click)="removeTodo(todo.todoId)"
         [disabled]="todo.todoId === editedId">
-        Remove
+         <mat-icon>delete</mat-icon>
       </button>
     </div>
     

@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-12 mb-3" *ngFor="let p of productArr">
+      <mat-card>
+
+        <mat-card-title>{{ p.name }}</mat-card-title>
+
+        <mat-card-content class="ms-3">
+          {{ p.desc }} :-
+          <span
+            [ngStyle]="{
+              color:
+                p.status === 'pending' ? 'orange' :
+                p.status === 'cancelled' ? 'red' :
+                p.status === 'delivered' ? 'green' : 'black'
+            }">
+            {{ p.status | uppercase }}
+          </span>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button mat-raised-button color="primary"
+                  (click)="setStatus(p, 'pending')">
+            Pending
+          </button>
+
+          <button mat-raised-button color="warn"
+                  (click)="setStatus(p, 'cancelled')">
+            Cancelled
+          </button>
+
+          <button mat-raised-button color="accent"
+                  (click)="setStatus(p, 'delivered')">
+            Delivered
+          </button>
+        </mat-card-actions>
+
+      </mat-card>
+    </div>
+
+  </div>
+</div>

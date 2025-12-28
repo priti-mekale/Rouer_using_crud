@@ -9,10 +9,10 @@ export class StudentService {
 
   students:Istudent[] = [
   {
-     fullName:"Priti M",
-    contact:7766554433,
-    email:"priti1@gmail.com",
-    stdId:'1'
+     fullName:"Ram s",
+    contact:7654321234,
+    email:"Ram@gmail.com",
+    stdId:'101'
 }
   
 ];

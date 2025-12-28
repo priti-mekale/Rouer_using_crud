@@ -13,12 +13,12 @@ editTodo$: Subject<Itodo> = new Subject<Itodo>()
   constructor() { }
 
   todoArr=[{
-    todoItem:'Red',
-    todoId:'1'
+    todoItem:'Angular',
+    todoId:'201'
   },
 {
-    todoItem:'Blue',
-    todoId:'1'
+    todoItem:'CSS',
+    todoId:'202'
   }]
 fetchTodos():Observable<Itodo[]>{
   return of (this.todoArr)
