@@ -33,6 +33,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {  MatDialogModule } from '@angular/material/dialog';
 import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { FairsDashboardComponent } from './components/fairs-dashboard/fairs-dashboard.component';
+import { FairCardComponent } from './components/fair-card/fair-card.component';
+import { FairDetailsComponent } from './components/fair-details/fair-details.component';
 
 
 @NgModule({
@@ -51,6 +54,9 @@ import { ProductListComponent } from './components/product-list/product-list.com
     UserFormComponent,
     ProductComponent,
     ProductListComponent,
+    FairsDashboardComponent,
+    FairCardComponent,
+    FairDetailsComponent,
   
   
     

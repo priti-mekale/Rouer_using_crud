@@ -9,6 +9,8 @@ import { PageNotFoundComponent } from "./components/page-not-found/page-not-foun
 
 import { UserComponent } from "./components/user/user.component";
 import { UserFormComponent } from "./components/user-form/user-form.component";
+import { FairsDashboardComponent } from "./components/fairs-dashboard/fairs-dashboard.component";
+import { FairDetailsComponent } from "./components/fair-details/fair-details.component";
 
 //3 //roting configuration
 // const appRoutes:Routes=[
@@ -71,7 +73,6 @@ import { UserFormComponent } from "./components/user-form/user-form.component";
 
 const appRoutes: Routes = [
 
-  // ✅ Default route
   {
     path: '',
     redirectTo: 'home',
@@ -91,6 +92,17 @@ const appRoutes: Routes = [
   {
     path: 'todos',
     component: TodoDashboardComponent
+  },
+
+  
+  {
+    path: 'fairs',
+    component: FairsDashboardComponent,
+    children:[
+      {
+      path:':id',
+      component:FairDetailsComponent
+    }]
   },
 
   {

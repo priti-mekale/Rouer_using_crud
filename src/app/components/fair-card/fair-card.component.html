@@ -1,0 +1,12 @@
+<!-- <div class="card mb-4" routerLinkActive="show" [routerLink]="fairObj.id" role="button">
+<div class="card-body">{{fairObj.name}}</div>
+</div> -->
+    <mat-card [routerLink]="[fairObj.id]" class="mb-3">
+      <mat-card-content>
+        <h3>{{ fairObj.name }}</h3>
+        <p>Event Type: {{ fairObj.type }}</p>
+        <p>Date: {{ (fairObj.endDate) | date}}</p>
+      </mat-card-content>
+    </mat-card>
+  
+ 

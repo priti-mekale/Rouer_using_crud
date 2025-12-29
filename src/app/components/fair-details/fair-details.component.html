@@ -1,0 +1,19 @@
+<!-- <h2>{{fairDetails.name}}</h2>
+<p [innerHTML]="fairDetails.description"></p> -->
+
+ <mat-card class="mb-3" style="background-color: #009688; color: white;">
+  <mat-card-content style="background-color: white; color: black; padding: 1rem;">
+  <img 
+    *ngIf="fairDetails.bannerUrl"
+    [src]="fairDetails.bannerUrl"
+    alt="Fair Banner"
+    class="fair-banner"
+  />
+    <h3>{{ fairDetails.name }}</h3>
+    <p><strong>Event Type:</strong> {{ fairDetails.type }}</p>
+    <p><strong>Start Date:</strong> {{ fairDetails.startDate | date:'mediumDate' }}</p>
+    <p><strong>End Date:</strong> {{ fairDetails.endDate | date:'mediumDate' }}</p>
+    <p><strong>Location:</strong> {{ fairDetails.location?.address1 }}, {{ fairDetails.location?.address2 }}</p>
+    <p><strong>Time Zone:</strong> {{ fairDetails.timezone }}</p>
+  </mat-card-content>
+</mat-card>
